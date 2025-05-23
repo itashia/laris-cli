@@ -76,7 +76,7 @@ It’s like if **Artisan had a caffeine overdose** and decided to **automate you
 ### **Option 1: The "I’m in a Hurry" Method**  
 ```bash
 composer global require laris/cli
-``
+```
 
 ### **Option 2: The "I’m in a Hurry" Method**  
 ```bash  
@@ -91,7 +91,7 @@ alias laris='php /path/to/laris/src/Application.php'
 
 ### **Option 4: The "I Want Global Access" Method**  
 Symlink it to `/usr/local/bin` (for **ultimate power**):  
-```bash  
+```bash
 ln -s /path/to/laris/src/Application.php /usr/local/bin/laris  
 ```  
 
