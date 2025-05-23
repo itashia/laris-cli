@@ -1,7 +1,9 @@
 {
     "name": "laris/cli",
     "description": "A supercharged Laravel development CLI tool for faster workflow",
-    "type": "project",
+    "keywords": [
+        "laravel","itarrshia","Laris","laravel-cli","development", "laravel-tool", "workflow"
+    ],
     "license": "MIT",
     "authors": [
         {
