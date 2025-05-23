@@ -20,7 +20,7 @@ class ProjectSelectCommand extends Command
 
     protected function configure(): void
     {
-        $this->setDescription('Select a Laravel project to work with');
+        $this->setName('select')->setDescription('Select a Laravel project to work with');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
