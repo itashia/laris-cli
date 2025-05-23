@@ -74,17 +74,22 @@ It’s like if **Artisan had a caffeine overdose** and decided to **automate you
 ## **🚀 Installation: Get Laris in 3 Seconds**  
 
 ### **Option 1: The "I’m in a Hurry" Method**  
+```bash
+composer global require laris/cli
+``
+
+### **Option 2: The "I’m in a Hurry" Method**  
 ```bash  
 git clone https://github.com/your-repo/laris.git && cd laris  
 ```  
 
-### **Option 2: The "I Like Aliases" Method**  
+### **Option 3: The "I Like Aliases" Method**  
 Add this to your `.bashrc` or `.zshrc`:  
 ```bash  
 alias laris='php /path/to/laris/src/Application.php'  
 ```  
 
-### **Option 3: The "I Want Global Access" Method**  
+### **Option 4: The "I Want Global Access" Method**  
 Symlink it to `/usr/local/bin` (for **ultimate power**):  
 ```bash  
 ln -s /path/to/laris/src/Application.php /usr/local/bin/laris  
