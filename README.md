@@ -80,7 +80,7 @@ composer global require laris/cli
 
 ### **Option 2: The "I’m in a Hurry" Method**  
 ```bash  
-git clone https://github.com/your-repo/laris.git && cd laris  
+git clone https://github.com/itashia/laris-cli.git && cd laris  
 ```  
 
 ### **Option 3: The "I Like Aliases" Method**  
