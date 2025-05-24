@@ -71,10 +71,11 @@ class Application extends SymfonyApplication
     /**
      * Create a new Laris application instance.
      */
-    public function __construct()
+    protected $version;
+    public function __construct(string $version)
     {
-        parent::__construct('Laris CLI', '1.0.0');
-
+        parent::__construct('Laris CLI', $version);
+        $this->version = $version;
         // Initialize file paths for history and projects
         $home = $_SERVER['HOME'] ?? getenv('HOME');
         $this->historyFile = $home . '/.laris_history';
@@ -252,7 +253,7 @@ class Application extends SymfonyApplication
             '<fg=magenta;bg=black>                                                                          </>',
             '',
             '<fg=cyan>Laravel Development Environment Manager</>',
-            '<fg=yellow>Version 1.0.0</>',
+            '<fg=yellow>Version '. $this->version . '</>',
             '',
         ]);
     }
