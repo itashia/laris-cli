@@ -3,7 +3,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$symfony = new Symfony\Component\Console\Application('Laris', '1.0.8');
+$symfony = new Symfony\Component\Console\Application('Laris', '1.0.9');
 
-$app = new Laris\Application(version: '1.0.8');
+$app = new Laris\Application(version: '1.0.9');
 $app->run();
