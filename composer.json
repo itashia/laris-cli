@@ -40,9 +40,7 @@
         "bin/laris"
     ],
     "config": {
-        "sort-packages": true,
-        "optimize-autoloader": true,
-        "preferred-install": "dist"
+        "sort-packages": true
     },
     "minimum-stability": "dev",
     "prefer-stable": true
