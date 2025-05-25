@@ -51,8 +51,11 @@ class NewCommand extends Command
             ->addOption('organization', null, InputOption::VALUE_REQUIRED, 'The GitHub organization to create the new repository for')
             ->addOption('database', null, InputOption::VALUE_REQUIRED, 'The database driver your application will use')
             ->addOption('react', null, InputOption::VALUE_NONE, 'Install the React Starter Kit')
+            ->addOption('react_rtl', null, InputOption::VALUE_NONE, 'Install the React Rtl Starter Kit')
             ->addOption('vue', null, InputOption::VALUE_NONE, 'Install the Vue Starter Kit')
+            ->addOption('vue_rtl', null, InputOption::VALUE_NONE, 'Install the Vue Rtl Starter Kit')
             ->addOption('livewire', null, InputOption::VALUE_NONE, 'Install the Livewire Starter Kit')
+            ->addOption('livewire_rtl', null, InputOption::VALUE_NONE, 'Install the Livewire Rtl Starter Kit')
             ->addOption('livewire-class-components', null, InputOption::VALUE_NONE, 'Generate stand-alone Livewire class components')
             ->addOption('workos', null, InputOption::VALUE_NONE, 'Use WorkOS for authentication')
             ->addOption('pest', null, InputOption::VALUE_NONE, 'Install the Pest testing framework')
@@ -117,14 +120,20 @@ class NewCommand extends Command
                 options: [
                     'none' => 'None',
                     'react' => 'React',
+                    'react_rtl' => 'React-rtl',
                     'vue' => 'Vue',
+                    'vue_rtl' => 'Vue-rtl',
                     'livewire' => 'Livewire',
+                    'livewire_rtl' => 'Livewire-rtl',
                 ],
                 default: 'none',
             )) {
                 'react' => $input->setOption('react', true),
+                'react_rtl' => $input->setOption('react_rtl', true),
                 'vue' => $input->setOption('vue', true),
+                'vue_rtl' => $input->setOption('vue_rtl', true),
                 'livewire' => $input->setOption('livewire', true),
+                'livewire_rtl' => $input->setOption('livewire_rtl', true),
                 default => null,
             };
 
@@ -763,9 +772,12 @@ class NewCommand extends Command
     protected function getStarterKit(InputInterface $input): ?string
     {
         return match (true) {
-            $input->getOption('react') => 'laravel/react-starter-kit',
-            $input->getOption('vue') => 'laravel/vue-starter-kit',
-            $input->getOption('livewire') => 'laravel/livewire-starter-kit',
+            $input->getOption('react') => 'itashia/react-starter-kit',
+            $input->getOption('react_rtl') => 'itashia/react-starter-kit-rtl',
+            $input->getOption('vue') => 'itashia/vue-starter-kit',
+            $input->getOption('vue_rtl') => 'itashia/vue-starter-kit-rtl',
+            $input->getOption('livewire') => 'itashia/livewire-starter-kit',
+            $input->getOption('livewire_rtl') => 'itashia/livewire-starter-kit-persian',
             default => $input->getOption('using'),
         };
     }
@@ -790,7 +802,7 @@ class NewCommand extends Command
      */
     protected function usingStarterKit(InputInterface $input)
     {
-        return $input->getOption('react') || $input->getOption('vue') || $input->getOption('livewire') || $input->getOption('using');
+        return $input->getOption('react') || $input->getOption('react_rtl') || $input->getOption('vue') || $input->getOption('vue_rtl') || $input->getOption('livewire') || $input->getOption('livewire_rtl') || $input->getOption('using');
     }
 
     /**
