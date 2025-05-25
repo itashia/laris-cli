@@ -777,7 +777,7 @@ class NewCommand extends Command
             $input->getOption('vue') => 'itashia/vue-starter-kit',
             $input->getOption('vue_rtl') => 'itashia/vue-starter-kit-rtl',
             $input->getOption('livewire') => 'itashia/livewire-starter-kit',
-            $input->getOption('livewire_rtl') => 'itashia/livewire-starter-kit-persian',
+            $input->getOption('livewire_rtl') => 'itashia/livewire-starter-kit-rtl',
             default => $input->getOption('using'),
         };
     }
