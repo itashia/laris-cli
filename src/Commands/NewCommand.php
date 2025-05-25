@@ -420,13 +420,13 @@ class NewCommand extends Command
         }
 
         $this->replaceInFile(
-            'DB_DATABASE=laravel',
+            'DB_DATABASE=laris',
             'DB_DATABASE='.str_replace('-', '_', strtolower($name)),
             $directory.'/.env'
         );
 
         $this->replaceInFile(
-            'DB_DATABASE=laravel',
+            'DB_DATABASE=laris',
             'DB_DATABASE='.str_replace('-', '_', strtolower($name)),
             $directory.'/.env.example'
         );
@@ -458,7 +458,7 @@ class NewCommand extends Command
         $defaults = [
             'DB_HOST=127.0.0.1',
             'DB_PORT=3306',
-            'DB_DATABASE=laravel',
+            'DB_DATABASE=laris',
             'DB_USERNAME=root',
             'DB_PASSWORD=',
         ];
@@ -487,7 +487,7 @@ class NewCommand extends Command
         $defaults = [
             '# DB_HOST=127.0.0.1',
             '# DB_PORT=3306',
-            '# DB_DATABASE=laravel',
+            '# DB_DATABASE=laris',
             '# DB_USERNAME=root',
             '# DB_PASSWORD=',
         ];
@@ -791,7 +791,7 @@ class NewCommand extends Command
     protected function usingLaravelStarterKit(InputInterface $input): bool
     {
         return $this->usingStarterKit($input) &&
-               str_starts_with($this->getStarterKit($input), 'laravel/');
+               str_starts_with($this->getStarterKit($input), 'itashia/');
     }
 
     /**
